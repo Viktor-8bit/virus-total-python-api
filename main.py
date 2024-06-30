@@ -21,3 +21,6 @@ for u in urls:
     print("___________________________")
 
     results.append(report_url)
+
+# make report
+write_to_excel(results=results)
