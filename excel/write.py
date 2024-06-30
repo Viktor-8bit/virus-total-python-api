@@ -29,5 +29,5 @@ def write_to_excel(results: list) -> None:
             "scores": scores
         }
     )
-
+    print(df.head(3))
     df.to_excel(f"{os.getcwd()}\\report.xlsx", sheet_name="report")
