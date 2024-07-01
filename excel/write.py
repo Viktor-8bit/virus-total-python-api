@@ -11,13 +11,15 @@ def write_to_excel(results: list) -> None:
     dates  = []
 
     for result in results:
-        if result.fortinet:
-            scan_result = ""
-            if result.score > 4:
-                scan_result += f"malicious {result.score}/{result.all_score}"
-            else:
-                scan_result += f"clean {result.score}/{result.all_score}"
-            scan_result += " fortinet"
+        scan_result = ""
+
+        if result.score < 4:
+           
+            scan_result += f"clean {result.score}/{result.all_score}"
+
+            if (result.fortinet):
+                scan_result += " fortinet"
+
             scores.append(scan_result)
             urls.append(result.scan_url)
             dates.append(result.date.__str__())

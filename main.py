@@ -14,11 +14,11 @@ for u in urls:
     scan_url = url_scan(u)
     report_url = get_url_report(scaned_url=scan_url)
 
-    # print("scan_url: ")
-    # print(f"    {scan_url}")
-    # print("report: ")
-    # print(f"    {report_url}")
-    # print("___________________________")
+    print("scan_url: ")
+    print(f"    {scan_url}")
+    print("report: ")
+    print(f"    {report_url}")
+    print("___________________________")
 
     results.append(report_url)
 
